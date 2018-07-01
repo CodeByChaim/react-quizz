@@ -1,7 +1,7 @@
 import React from 'react';
 import ghLogo from '../github32.png';
 
-export const Footer = () => (
+const Footer = () => (
     <footer className="footer">
         <div className="author">
             <span>Chaim10</span>
@@ -15,3 +15,5 @@ export const Footer = () => (
         </div>
     </footer>
 );
+
+export default Footer;

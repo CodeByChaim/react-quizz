@@ -1,11 +1,20 @@
 import React from "react";
+import {connect} from 'react-redux';
 
-const Result = () => {
+const Result = ({quizzes}) => {
     return (
         <div className="right">
-        <h2>Quizz Result</h2>
+            <span className="square">
+                {quizzes.map(quiz => <button className="square-button"
+                                               key={quiz.selected.id}
+                                               >{quiz.selected.text}</button>)}
+            </span>
         </div>
     )
 };
 
-export default Result;
+const mapStateToProps = (state) => ({
+    quizzes: state.quizzes
+});
+
+export default connect(mapStateToProps)(Result);

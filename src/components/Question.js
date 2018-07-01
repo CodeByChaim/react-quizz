@@ -1,10 +1,19 @@
 import React from "react";
+import {connect} from "react-redux";
 
-export const Question = ({body}) => {
-    console.log({body});
+const Question = ({text}) => {
+
+    console.log({text});
     return (
         <div className="question">
-            <h2>{body}</h2>
+            <h2>{text}</h2>
         </div>
     );
 };
+
+const mapStateToProps = (state) => ({
+    text: state.quizzes[0].question
+});
+
+export default connect(mapStateToProps)(Question);
+
