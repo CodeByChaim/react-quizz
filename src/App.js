@@ -9,20 +9,20 @@ import Result from "./components/Result";
 
 class App extends Component {
 
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    render() {
-        return (
-            <div className="grid-container">
-                <Header/>
-                <Quiz/>
-                <Result/>
-                <Footer/>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="grid-container">
+        <Header/>
+        <Quiz/>
+        <Result/>
+        <Footer/>
+      </div>
+    );
+  }
 }
 
 export default App;

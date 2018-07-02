@@ -6,7 +6,6 @@ const Result = ({quizzes, results}) => {
   console.log({quizzes});
   console.log({results});
 
-
   return (
     <div className="right">
       <span className="square">

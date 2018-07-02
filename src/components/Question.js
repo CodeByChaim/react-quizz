@@ -19,9 +19,5 @@ function mapStateToProps(state) {
     return {text: ""};
 }
 
-// const mapStateToProps = (state) => ({
-//   text: state.quizzes[state.active].question
-// });
-
 export default connect(mapStateToProps)(Question);
 
