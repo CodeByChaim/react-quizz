@@ -38,11 +38,26 @@ Choice.propTypes = {
   selected: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => ({
-  options: state.quizzes[state.active].options,
-  current: state.quizzes[state.active].id,
-  active: state.active
-});
+function mapStateToProps(state) {
+  if(state.active < state.quizzes.length)
+    return {
+      options: state.quizzes[state.active].options,
+      current: state.quizzes[state.active].id,
+      active: state.active
+    };
+  else
+    return {
+      options: [],
+      current: state.active,
+      active: state.active
+    };
+}
+
+// const mapStateToProps = (state) => ({
+//   options: state.quizzes[state.active].options,
+//   current: state.quizzes[state.active].id,
+//   active: state.active
+// });
 
 const mapDispatchToProps = {
   selected: selected,

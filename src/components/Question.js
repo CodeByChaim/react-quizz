@@ -12,9 +12,16 @@ const Question = ({text}) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  text: state.quizzes[state.active].question
-});
+function mapStateToProps(state) {
+  if(state.active < state.quizzes.length)
+    return {text: state.quizzes[state.active].question};
+  else
+    return {text: ""};
+}
+
+// const mapStateToProps = (state) => ({
+//   text: state.quizzes[state.active].question
+// });
 
 export default connect(mapStateToProps)(Question);
 
