@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-gap: 0;
-  grid-template-columns: repeat(1, [col] auto );
-  grid-template-rows: repeat(3, [row] auto  );
+  grid-template-columns: repeat(1, [col] auto);
+  grid-template-rows: repeat(3, [row] auto);
   background-color: #eee;
   color: #444;
 }
@@ -13,7 +13,7 @@
   border-radius: 5px;
   padding: 10px;
   font-size: 100%;
-  margin: 3px ;
+  margin: 3px;
 }
 
 .box .box {
@@ -36,7 +36,7 @@
   height: 35px;
 }
 
-.wrapper{
+.wrapper {
   grid-column: col / span 4;
   grid-row: row 2;
   display: grid;
@@ -128,8 +128,12 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {

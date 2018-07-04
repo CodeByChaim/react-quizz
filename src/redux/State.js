@@ -52,6 +52,5 @@ export const initialState = {
     {id: 106, superhero: "Deredevil", img: "Deredevil.jpg"},
     {id: 107, superhero: "Spiderman", img: "Spiderman.jpg"}
   ],
-  selected: [
-  ]
+  selected: []
 };
