@@ -2,9 +2,9 @@ import React from 'react';
 import logo from '../logo.svg';
 
 const Header = () => (
-  <header className="header">
+  <header className="box header">
     <img src={logo} className="App-logo" alt="logo"/>
-    <h1 className="App-title">Welcome to React <strong>Quizz</strong></h1>
+    <span className="App-title">Welcome to React <strong>Quizz</strong></span>
   </header>
 );
 

@@ -1,35 +1,32 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {selected} from '../redux/actions/ChoiceAction';
-import {active} from '../redux/actions/ActiveAction';
+import {selectMe} from '../redux/actions/ChoiceAction';
+import {activate} from '../redux/actions/ActiveAction';
 
 class Choice extends Component {
 
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
+
+    // This binding is necessary to make `this` work in the callback
+    this.onClick = this.onClick.bind(this);
   }
 
-  onSubmit(e) {
+  onClick(id, e) {
     e.preventDefault();
-    this.props.selected(this.myRef.value);
-    console.log('Props', this.props.selected);
-
+    const selected = this.props.options.find(option => option.id === id);
+    this.props.selected(selected);
     this.props.active(this.props.current);
-    console.log('Props', this.props.active);
   }
 
   render() {
     return (
-      <form onSubmit={this.onSubmit.bind(this)}>
-        <span className="square">
-          {this.props.options.map(option => <button className="square-button"
-                                                    ref={ref => this.myRef = ref}
-                                                    key={option.id}
-                                                    value={option.text}>{option.text}</button>)}
-         </span>
-      </form>
+      <span className="square">
+        {this.props.options.map(option => <button className="square-button"
+                                                  onClick={this.onClick.bind(this, option.id)}
+                                                  key={option.id}>{option.text}</button>)}
+      </span>
     )
   }
 }
@@ -38,7 +35,7 @@ Choice.propTypes = {
   selected: PropTypes.func.isRequired
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   if (state.active < state.quizzes.length)
     return {
       options: state.quizzes[state.active].options,
@@ -54,8 +51,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  selected: selected,
-  active: active
+  selected: selectMe,
+  active: activate
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Choice);

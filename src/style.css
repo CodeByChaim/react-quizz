@@ -1,0 +1,149 @@
+.container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(1, [col] auto );
+  grid-template-rows: repeat(3, [row] auto  );
+  background-color: #eee;
+  color: #444;
+}
+
+.box {
+  background-color: #aaa;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 100%;
+  margin: 3px ;
+}
+
+.box .box {
+  background-color: #ccc;
+  color: #444;
+}
+
+.header {
+  grid-column: col / span 4;
+  grid-row: row;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer {
+  grid-column: col / span 4;
+  grid-row: row 3;
+  height: 35px;
+}
+
+.wrapper{
+  grid-column: col / span 4;
+  grid-row: row 2;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.quiz {
+  grid-column: 1;
+  grid-row: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.result {
+  grid-column: 2;
+  grid-row: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  height: 250px;
+  width: 400px;
+  /* cursor: pointer;*/
+  position: relative;
+  padding: 5px 10px;
+  border: 1px solid rgba(57, 128, 221, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-left: 5px;
+  color: #313031;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+.square {
+  display: inline-flex;
+}
+
+.square-button {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  border: 1px solid rgba(57, 128, 221, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-left: 5px;
+  color: #313031;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+.square-button:hover {
+  background-color: rgba(142, 141, 142, 0.4);
+}
+
+.square-button:active {
+  background-color: rgba(205, 204, 205, 0.4);
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.App-title {
+  align-self: center;
+  font-size: 1.5em;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 50px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  background: #dfe0e1;
+  border-top: .1rem solid #d1d1d1;
+  height: 50px;
+  padding: 0 15px;
+  right: 0;
+  z-index: 1;
+  box-shadow: 1px -1px 15px #5d5d5d;
+}

@@ -1,47 +1,57 @@
 export const initialState = {
+  active: 0,
   title: "Which Marvel Justice League Character You Are?",
   quizzes: [
     {
       id: 1,
       question: "Pick a type of weather?",
       options: [
-        {id: 12, text: "Sunshine"},
-        {id: 14, text: "Cloudy"},
-        {id: 16, text: "Windy"},
-        {id: 18, text: "Rainy"}
-      ],
-      selected: ""
+        {id: 1, text: "Sunshine"},
+        {id: 2, text: "Cloudy"},
+        {id: 3, text: "Windy"},
+        {id: 4, text: "Rainy"}
+      ]
     },
     {
       id: 2,
       question: "Pick a soft drink?",
       options: [
-        {id: 22, text: "Coca Cola"},
-        {id: 24, text: "Root Beer"},
-        {id: 26, text: "Apple Cider"},
-        {id: 28, text: "Perrier"}
-      ],
-      selected: ""
+        {id: 1, text: "Coca Cola"},
+        {id: 2, text: "Root Beer"},
+        {id: 3, text: "Apple Cider"},
+        {id: 4, text: "Perrier"}
+      ]
     },
     {
       id: 3,
+      question: "Pick a book?",
+      options: [
+        {id: 1, text: "The Hobbit"},
+        {id: 2, text: "A Song of Ice and Fire"},
+        {id: 3, text: "Harry Potter"},
+        {id: 4, text: "Citizen Kane"}
+      ]
+    },
+    {
+      id: 4,
       question: "Pick a dessert?",
       options: [
-        {id: 32, text: "Pavlova"},
-        {id: 34, text: "Creme brulee"},
-        {id: 36, text: "Chocolate Souffle"},
-        {id: 38, text: "Tiramisu"}
-      ],
-      selected: ""
+        {id: 1, text: "Pavlova"},
+        {id: 2, text: "Creme brulee"},
+        {id: 3, text: "Chocolate Souffle"},
+        {id: 4, text: "Tiramisu"}
+      ]
     }
   ],
-  active: 0,
   results: [
-    {id: 101, superhero: "Superman"},
-    {id: 102, superhero: "Batman"},
-    {id: 103, superhero: "Green Lantern"},
-    {id: 104, superhero: "Flash"},
-    {id: 105, superhero: "Wonder Woman"},
-    {id: 106, superhero: "Aquaman"}
+    {id: 101, superhero: "Superman", img: "Superman.jpg"},
+    {id: 102, superhero: "Ironman", img: "Ironman.jpg"},
+    {id: 103, superhero: "Green Lantern", img: "GreenLantern.jpg"},
+    {id: 104, superhero: "Hulk", img: "Hulk.jpg"},
+    {id: 105, superhero: "Wonder Woman", img: "WonderWoman.jpg"},
+    {id: 106, superhero: "Deredevil", img: "Deredevil.jpg"},
+    {id: 107, superhero: "Spiderman", img: "Spiderman.jpg"}
+  ],
+  selected: [
   ]
 };

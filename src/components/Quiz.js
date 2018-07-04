@@ -3,15 +3,19 @@ import {connect} from 'react-redux';
 
 import Choice from './Choice';
 import Question from './Question';
-
+import Result from "./Result";
 
 const Quiz = ({title}) => {
-
   return (
-    <div className="left">
-      <h4>{title}</h4>
-      <Question/>
-      <Choice/>
+    <div className="box wrapper">
+      <div className="box quiz">
+        <h2>{title}</h2>
+        <Question/>
+        <Choice/>
+      </div>
+      <div className="box result">
+        <Result/>
+      </div>
     </div>
   );
 };

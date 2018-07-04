@@ -2,9 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Question = ({text}) => {
-
-  console.log({text});
-
   return (
     <div className="question">
       <h2>{text}</h2>
@@ -13,11 +10,10 @@ const Question = ({text}) => {
 };
 
 function mapStateToProps(state) {
-  if(state.active < state.quizzes.length)
+  if (state.active < state.quizzes.length)
     return {text: state.quizzes[state.active].question};
   else
-    return {text: ""};
+    return {text: "See result to your right"};
 }
 
 export default connect(mapStateToProps)(Question);
-

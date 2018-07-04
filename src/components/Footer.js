@@ -2,7 +2,7 @@ import React from 'react';
 import ghLogo from '../github32.png';
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="box footer">
     <div className="author">
       <span>Chaim10</span>
     </div>
